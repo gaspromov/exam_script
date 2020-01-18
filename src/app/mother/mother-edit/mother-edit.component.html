@@ -1,0 +1,17 @@
+
+<div class="container" *ngIf="mother">
+    <form  [formGroup]="formEdit" (ngSubmit)="edit()" >
+        <div class="form-group">
+            <input type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="name" placeholder="name">
+            <input type="text" class="form-control" formControlName="article" placeholder="article">
+            <input type="text" class="form-control" formControlName="price" placeholder="price">
+            <input type="text" class="form-control" formControlName="chipset" placeholder="chipset">
+            <input type="text" class="form-control" formControlName="formFactor" placeholder="formFactor">
+
+            <p class="text text-danger" *ngIf="formEdit.invalid">Все поля должны быть запонены!</p>
+            <button [disabled]="formEdit.invalid" class="btn btn-success" type="submit">Изменить</button>
+            <button  class="btn btn-danger" type="button" (click)="delete()" >Удалить</button>
+    
+          </div>
+    </form>
+    </div>

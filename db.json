@@ -1,0 +1,20 @@
+{
+  "mothers": [
+    {
+      "name": "Name",
+      "article": "228",
+      "price": "200",
+      "chipset": "300",
+      "formFactor": "500",
+      "id": 1
+    },
+    {
+      "name": "regr",
+      "article": "rferfer",
+      "price": "399",
+      "chipset": "уауа",
+      "formFactor": "rmgklrgm",
+      "id": 2
+    }
+  ]
+}

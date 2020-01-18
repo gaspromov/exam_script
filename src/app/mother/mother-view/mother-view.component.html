@@ -1,0 +1,32 @@
+
+
+
+<div class="container">
+    <div class="form-group">
+        <label for="exampleFormControlSelect2">Example multiple select</label>
+        <select   class="form-control"  id="exampleFormControlSelect2" [(ngModel)]="sortParam">
+          <option selected > Сортировка</option>
+          <option value="id1">По возрастанию id</option>
+          <option value="id2">По убыванию id</option>
+          <option value="price1">По возрастанию цена</option>
+          <option value="price2">По убыванию цена</option>
+        </select>
+    </div>
+    <div class="forn-group">
+        <input type="text" class="form-control" placeholder="filtering" [(ngModel)]="filterParam">
+    </div>
+
+
+
+    <h2 class="header">Mothers</h2>
+    <div class="row" *ngFor="let mother of mothers | sortFilter : sortParam : filterParam ">
+
+        <div class="col-2">  {{mother.name}} </div>
+        <div class="col-2"> {{mother.article}} </div>
+        <div class="col-2"> {{mother.price | currency}} </div>    
+        <div class="col-2"> {{mother.chipset}} </div>
+        <div class="col-2"> {{mother.formFactor}} </div>
+        <button class="btn btn-small" [routerLink]="['edit', mother.id]">Редактировать</button>
+      </div>
+      <button [routerLink]="['add']" class="btn ">Добавить</button>
+</div>
