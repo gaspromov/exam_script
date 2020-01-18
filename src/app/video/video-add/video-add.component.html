@@ -1,1 +1,15 @@
-<p>video-add works!</p>
+<div class="container" >
+    <form  [formGroup]="formAdd" (ngSubmit)="add()">
+        <div class="form-group">
+            <input type="text" class="form-control" id="" formControlName="name" placeholder="name">
+            <input type="text" class="form-control" formControlName="article" placeholder="article"  pattern="^[0-9]{0,}">
+            <input type="text" class="form-control" formControlName="price" placeholder="price" pattern="^[0-9]{0,}">
+            <input type="text" class="form-control" formControlName="chipset" placeholder="chipset">
+            <input type="text" class="form-control" formControlName="formFactor" placeholder="formFactor">
+
+            <p class="text text-danger" *ngIf="formAdd.invalid">Все поля должны быть запонены правильно!</p>
+            <button [disabled]="formAdd.invalid" class="btn btn-success" type="submit">Изменить</button>
+    
+          </div>
+    </form>
+</div>

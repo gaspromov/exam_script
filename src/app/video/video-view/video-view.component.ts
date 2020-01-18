@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VideoService } from 'src/app/shared/video.service';
 
 @Component({
   selector: 'app-video-view',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoViewComponent implements OnInit {
 
-  constructor() { }
+  videos:any=[{}];
+  sortParam: string = '';
+  filterParam: string = '';
 
-  ngOnInit() {
+  constructor(
+    private http: VideoService,
+  ) { }
+
+  async ngOnInit() {
+    this.videos = await this.http.getVideo();
   }
 
 }
