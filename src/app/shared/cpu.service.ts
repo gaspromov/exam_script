@@ -15,25 +15,25 @@ export class CpuService extends API {
     this.header.set ('Content-type', 'application/json');
   }
 
-  async getMother() {
+  async getCpu() {
     return this.get(`${this.url}`, this.header).toPromise();
   }
 
   
-  async getMotherById(id: number) {
+  async getCpuById(id: number) {
     return this.get(`${this.url}/${id}`, this.header).toPromise();
   }
 
 
-  async postMother(data) {
+  async postCpu(data) {
     return this.post(`${this.url}`, data, this.header).toPromise();
   }
 
-  async putMother(id: number, data) {
+  async putCpu(id: number, data) {
     return this.put(`${this.url}/${id}`, data, this.header).toPromise();
   }
 
-  async deleteMother(id: number) {
+  async deleteCpu(id: number) {
     return this.delete(`${this.url}/${id}`, this.header).toPromise();
   }
 }

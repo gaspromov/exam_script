@@ -8,8 +8,6 @@ import { MotherService } from 'src/app/shared/mother.service';
 })
 export class MotherViewComponent implements OnInit {
   mothers:any=[{}];
-  sortParam: string = '';
-  filterParam: string = '';
 
   constructor(
     private http: MotherService,

@@ -13,13 +13,16 @@
         </select>
     </div>
     <div class="forn-group">
-        <input type="text" class="form-control" placeholder="filtering" [(ngModel)]="filterParam">
+        <input type="text" class="col-3 form-control" placeholder="filtering" [(ngModel)]="filterParam">
+    </div>
+    <div class="forn-group" style="margin-top: 20px;">
+        <input type="text" class="col-3 form-control" placeholder="filtering" [(ngModel)]="filterParamArticle">
     </div>
 
 
 
-    <h2 class="header">VideoCarts</h2>
-    <div class="row" *ngFor="let video of videos | sortFilter : sortParam : filterParam ">
+    <h2 class="header">VideoCards</h2>
+    <div class="row" *ngFor="let mother of mothers | sortFilter : sortParam : filterParam : filterParamArticle">
 
         <div class="col-2">  {{video.name}} </div>
         <div class="col-2"> {{video.article}} </div>

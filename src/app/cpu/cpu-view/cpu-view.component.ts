@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CpuService } from 'src/app/shared/cpu.service';
 
 @Component({
   selector: 'app-cpu-view',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CpuViewComponent implements OnInit {
 
-  constructor() { }
+  CPU:any=[{}];
+  sortParam: string = '';
+  filterParam: string = '';
 
-  ngOnInit() {
+  constructor(
+    private http: CpuService,
+  ) { }
+
+  async ngOnInit() {
+    this.CPU = await this.http.getCpu();
+
   }
-
 }

@@ -42,5 +42,31 @@
       "formFactor": "ijij",
       "id": 3
     }
+  ],
+  "cpu": [
+    {
+      "name": "tgtgt",
+      "article": "22",
+      "price": "200",
+      "chipset": "300",
+      "formFactor": "500",
+      "id": 1
+    },
+    {
+      "name": "Anton",
+      "article": "rferfer",
+      "price": "399",
+      "chipset": "уауа",
+      "formFactor": "tg",
+      "id": 2
+    },
+    {
+      "name": "fijij",
+      "article": "0909",
+      "price": "81812821821",
+      "chipset": "iji",
+      "formFactor": "ijij",
+      "id": 3
+    }
   ]
 }

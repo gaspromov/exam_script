@@ -4,7 +4,7 @@
 <div class="container">
     <div class="form-group">
         <label for="exampleFormControlSelect2">Example multiple select</label>
-        <select   class="form-control"  id="exampleFormControlSelect2" [(ngModel)]="sortParam">
+        <select   class="form-control col-5"  id="exampleFormControlSelect2" [(ngModel)]="sortParam">
           <option selected > Сортировка</option>
           <option value="id1">По возрастанию id</option>
           <option value="id2">По убыванию id</option>
@@ -13,13 +13,16 @@
         </select>
     </div>
     <div class="forn-group">
-        <input type="text" class="form-control" placeholder="filtering" [(ngModel)]="filterParam">
+        <input type="text" class="col-3 form-control" placeholder="filtering" [(ngModel)]="filterParam">
+    </div>
+    <div class="forn-group" style="margin-top: 20px;">
+        <input type="text" class="col-3 form-control" placeholder="filtering by article" [(ngModel)]="filterParamArticle">
     </div>
 
 
 
     <h2 class="header">Mothers</h2>
-    <div class="row" *ngFor="let mother of mothers | sortFilter : sortParam : filterParam ">
+    <div class="row" *ngFor="let mother of mothers | sortFilter : sortParam : filterParam : filterParamArticle">
 
         <div class="col-2">  {{mother.name}} </div>
         <div class="col-2"> {{mother.article}} </div>
