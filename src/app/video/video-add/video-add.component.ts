@@ -23,8 +23,7 @@ export class VideoAddComponent implements OnInit {
       name: new FormControl({ value: '', disabled: this.disabled }, [Validators.required]),
       article: new FormControl({ value: '', disabled: this.disabled }, [Validators.required]),
       price: new FormControl({ value: '', disabled: this.disabled }, [Validators.required]),
-      chipset: new FormControl({ value: '', disabled: this.disabled }, [Validators.required]),
-      formFactor: new FormControl({ value: '', disabled: this.disabled }, [Validators.required]),
+      v: new FormControl({ value: '', disabled: this.disabled }, [Validators.required])
     })
   }
 
@@ -35,8 +34,7 @@ export class VideoAddComponent implements OnInit {
           name: this.formAdd.value.name,
           article: this.formAdd.value.article,
           price: this.formAdd.value.price,
-          chipset: this.formAdd.value.chipset,
-          formFactor: this.formAdd.value.formFactor,
+          v: this.formAdd.value.v
         }
       )
       this.router.navigate(['/video']);

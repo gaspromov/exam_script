@@ -21,8 +21,8 @@ export class MorherAddComponent implements OnInit {
   ngOnInit() {
     this.formAdd = new FormGroup({
       name: new FormControl({ value: '', disabled: this.disabled }, [Validators.required]),
-      article: new FormControl({ value: '', disabled: this.disabled }, [Validators.required]),
-      price: new FormControl({ value: '', disabled: this.disabled }, [Validators.required]),
+      article: new FormControl({ value: '', disabled: this.disabled }, [Validators.required, Validators.pattern("^[0-9]{0,}")]),
+      price: new FormControl({ value: '', disabled: this.disabled }, [Validators.required, Validators.pattern("^[0-9]{0,}")]),
       chipset: new FormControl({ value: '', disabled: this.disabled }, [Validators.required]),
       formFactor: new FormControl({ value: '', disabled: this.disabled }, [Validators.required]),
     })
@@ -31,13 +31,8 @@ export class MorherAddComponent implements OnInit {
   async add(){
     try{
       await this.http.postMother(
-        {
-          name: this.formAdd.value.name,
-          article: this.formAdd.value.article,
-          price: this.formAdd.value.price,
-          chipset: this.formAdd.value.chipset,
-          formFactor: this.formAdd.value.formFactor,
-        }
+          this.formAdd.value
+        
       )
       this.router.navigate(['/mother']);
     }catch(e){

@@ -24,7 +24,8 @@ export class CpuAddComponent implements OnInit {
       article: new FormControl({ value: '', disabled: this.disabled }, [Validators.required]),
       price: new FormControl({ value: '', disabled: this.disabled }, [Validators.required]),
       chipset: new FormControl({ value: '', disabled: this.disabled }, [Validators.required]),
-      formFactor: new FormControl({ value: '', disabled: this.disabled }, [Validators.required]),
+      cores: new FormControl({ value: '', disabled: this.disabled }, [Validators.required]),
+      count: new FormControl({ value: '', disabled: this.disabled }, [Validators.required])
     })
   }
 
@@ -36,7 +37,8 @@ export class CpuAddComponent implements OnInit {
           article: this.formAdd.value.article,
           price: this.formAdd.value.price,
           chipset: this.formAdd.value.chipset,
-          formFactor: this.formAdd.value.formFactor,
+          cores: this.formAdd.value.cores,
+          count: this.formAdd.value.count
         }
       )
       this.router.navigate(['/cpu']);

@@ -6,7 +6,8 @@
             <input type="text" class="form-control" formControlName="article" placeholder="article">
             <input type="text" class="form-control" formControlName="price" placeholder="price">
             <input type="text" class="form-control" formControlName="chipset" placeholder="chipset">
-            <input type="text" class="form-control" formControlName="formFactor" placeholder="formFactor">
+            <input type="text" class="form-control" formControlName="cores" placeholder="count cores">
+            <input type="text" class="form-control" formControlName="count" placeholder="frequency">
 
             <p class="text text-danger" *ngIf="formEdit.invalid">Все поля должны быть запонены!</p>
             <button [disabled]="formEdit.invalid" class="btn btn-success" type="submit">Изменить</button>

@@ -32,7 +32,8 @@ export class CpuEditComponent implements OnInit {
       article: new FormControl({ value: this.cpu.article, disabled: this.disabled }, [Validators.required]),
       price: new FormControl({ value: this.cpu.price, disabled: this.disabled }, [Validators.required]),
       chipset: new FormControl({ value: this.cpu.chipset, disabled: this.disabled }, [Validators.required]),
-      formFactor: new FormControl({ value: this.cpu.formFactor, disabled: this.disabled }, [Validators.required]),
+      cores: new FormControl({ value: this.cpu.cores, disabled: this.disabled }, [Validators.required]),
+      count: new FormControl({ value: this.cpu.count, disabled: this.disabled }, [Validators.required])
     })
     })
   }
@@ -54,7 +55,8 @@ export class CpuEditComponent implements OnInit {
           article: this.formEdit.value.article,
           price: this.formEdit.value.price,
           chipset: this.formEdit.value.chipset,
-          formFactor: this.formEdit.value.formFactor
+          cores: this.formEdit.value.cores,
+          count: this.formEdit.value.count
         }
       );
       this.router.navigate(['cpu'])
@@ -66,7 +68,7 @@ export class CpuEditComponent implements OnInit {
   async delete(){
     try{
       await this.http.deleteCpu(this.id);
-      this.router.navigate(['/cpu'])
+      this.router.navigate(['cpu'])
     }catch(e){
       console.log(e);
     }

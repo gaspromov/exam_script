@@ -29,8 +29,8 @@ export class MotherEditComponent implements OnInit {
     this.getMother(this.id).then(() => {
     this.formEdit = new FormGroup({
       name: new FormControl({ value: this.mother.name, disabled: this.disabled }, [Validators.required]),
-      article: new FormControl({ value: this.mother.article, disabled: this.disabled }, [Validators.required]),
-      price: new FormControl({ value: this.mother.price, disabled: this.disabled }, [Validators.required]),
+      article: new FormControl({ value: this.mother.article, disabled: this.disabled }, [Validators.required, Validators.pattern("^[0-9]{0,}")]),
+      price: new FormControl({ value: this.mother.price, disabled: this.disabled }, [Validators.required, Validators.pattern("^[0-9]{0,}")]),
       chipset: new FormControl({ value: this.mother.chipset, disabled: this.disabled }, [Validators.required]),
       formFactor: new FormControl({ value: this.mother.formFactor, disabled: this.disabled }, [Validators.required]),
     })

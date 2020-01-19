@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Gazratov182';
+
+  onBigPrice(price){
+    if (Number(price) > 500){
+      return true;
+    }else return false;
+  }
 }

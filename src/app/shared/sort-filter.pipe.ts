@@ -1,14 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
+import {isNullOrUndefined} from "util";
 @Pipe({
   name: 'sortFilter'
 })
 export class SortFilterPipe implements PipeTransform {
 
   transform(
-    arr:any[], sortParam: string, filterParam: string, filterParamActicle: string
+    arr:any[], sortParam: string, filterParam: string, filterParamArticle: string
     ) {
-    if (sortParam === undefined && filterParam === '' && filterParamActicle ===''){
+    if (sortParam === undefined && filterParam === ''){
       return arr;
     }
     if ( sortParam !== undefined){
@@ -31,7 +31,7 @@ export class SortFilterPipe implements PipeTransform {
             }else return 0;
           }))
           break;
-        case "price1": 
+        case "price2": 
           arr = arr.sort((function (a, b) {
             if ( Number(a.price) > Number(b.id)){
               return -1;
@@ -40,7 +40,7 @@ export class SortFilterPipe implements PipeTransform {
             }else return 0;
           }))
           break;
-        case "price2":
+        case "price1":
           arr = arr.sort((function (a, b) {
             if ( Number(a.price) < Number(b.price)){
               return -1;
@@ -52,18 +52,18 @@ export class SortFilterPipe implements PipeTransform {
       }
     }
 
-    if (filterParam !== ''){
+    if ( !isNullOrUndefined(filterParam) && filterParam !== ''){
       let filter = arr.filter(
         ell => ell.name.toLowerCase().indexOf(filterParam.toLowerCase()) === 0);
       return filter;
     }
 
-    if (filterParamActicle !== ''){
-      let filter1 = arr.filter(
-        ell1 => ell1.aricle.toLowerCase().indexOf(filterParam.toLowerCase()) === 0);
-      return filter1;
+    if ( !isNullOrUndefined(filterParamArticle) && filterParamArticle !== ''){
+      let filter = arr.filter(
+        ell => ell.article.indexOf(String(filterParamArticle)) === 0);
+      return filter;
     }
-
+    
     return arr;
   }
 

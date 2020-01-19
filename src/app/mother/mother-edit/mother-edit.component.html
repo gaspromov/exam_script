@@ -4,7 +4,13 @@
         <div class="form-group">
             <input type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="name" placeholder="name">
             <input type="text" class="form-control" formControlName="article" placeholder="article">
+            <div class="alert alert-danger" *ngIf="formEdit.controls['article'].invalid">
+                Введите число
+            </div>
             <input type="text" class="form-control" formControlName="price" placeholder="price">
+            <div class="alert alert-danger" *ngIf="formEdit.controls['price'].invalid">
+                Введите число
+            </div>
             <input type="text" class="form-control" formControlName="chipset" placeholder="chipset">
             <input type="text" class="form-control" formControlName="formFactor" placeholder="formFactor">
 

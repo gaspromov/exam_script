@@ -1,46 +1,52 @@
 {
   "mothers": [
     {
-      "name": "Name",
-      "article": "228",
-      "price": "200",
-      "chipset": "300",
-      "formFactor": "500",
-      "id": 1
-    },
-    {
       "name": "regr",
-      "article": "rferfer",
+      "article": "889",
       "price": "399",
-      "chipset": "уауа",
-      "formFactor": "rmgklrgm",
-      "id": 2
-    }
-  ],
-  "videos": [
-    {
-      "name": "tgtgt",
-      "article": "22",
-      "price": "200",
-      "chipset": "300",
-      "formFactor": "500",
-      "id": 1
-    },
-    {
-      "name": "regr",
-      "article": "rferfer",
-      "price": "399",
-      "chipset": "уауа",
-      "formFactor": "tg",
+      "chipset": "chip1",
+      "formFactor": "Yes",
       "id": 2
     },
     {
-      "name": "fijij",
-      "article": "0909",
-      "price": "81812821821",
-      "chipset": "iji",
-      "formFactor": "ijij",
+      "name": "Renat",
+      "article": "900",
+      "price": "18",
+      "chipset": "iiii",
+      "formFactor": "90",
       "id": 3
+    },
+    {
+      "name": "Named",
+      "article": "700",
+      "price": "800",
+      "chipset": "70",
+      "formFactor": "True",
+      "id": 4
+    },
+    {
+      "name": "Name",
+      "article": "12",
+      "price": "800",
+      "chipset": "Jiji",
+      "formFactor": "ijij",
+      "id": 5
+    },
+    {
+      "name": "ergerg",
+      "article": "67",
+      "price": "345",
+      "chipset": "g",
+      "formFactor": "eff",
+      "id": 6
+    },
+    {
+      "name": "uj",
+      "article": "5",
+      "price": "10010",
+      "chipset": "tyty",
+      "formFactor": "uuu",
+      "id": 7
     }
   ],
   "cpu": [
@@ -49,23 +55,58 @@
       "article": "22",
       "price": "200",
       "chipset": "300",
-      "formFactor": "500",
+      "cores": "500",
+      "count": "5",
       "id": 1
     },
     {
-      "name": "Anton",
-      "article": "rferfer",
-      "price": "399",
-      "chipset": "уауа",
-      "formFactor": "tg",
+      "name": "Need",
+      "article": "78",
+      "price": "809",
+      "chipset": "Chip",
+      "cores": "3",
+      "count": "1800",
       "id": 2
     },
     {
-      "name": "fijij",
-      "article": "0909",
-      "price": "81812821821",
-      "chipset": "iji",
-      "formFactor": "ijij",
+      "name": "Look",
+      "article": "89",
+      "price": "900",
+      "chipset": "pop",
+      "cores": "8",
+      "count": "700",
+      "id": 3
+    },
+    {
+      "name": "OutPut",
+      "article": "77",
+      "price": "1800",
+      "chipset": "Chip",
+      "cores": "4",
+      "count": "2500",
+      "id": 4
+    }
+  ],
+  "videos": [
+    {
+      "name": "tgtgt",
+      "article": "22",
+      "price": "200",
+      "v": "300",
+      "id": 1
+    },
+    {
+      "name": "Name",
+      "article": "89",
+      "price": "8000",
+      "v": "v",
+      "id": 2
+    },
+    {
+      "name": "Hello",
+      "article": "90",
+      "price": "700",
+      "v": "900",
       "id": 3
     }
   ]

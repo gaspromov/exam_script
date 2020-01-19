@@ -17,4 +17,9 @@ export class MotherViewComponent implements OnInit {
     this.mothers = await this.http.getMother();
   }
 
+  bigPrice(price){
+    if (Number(price) > 500)
+      return true;
+    else return false
+  }
 }
